@@ -1,0 +1,111 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+
+
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px;
+    background: url('background.jpg') center/cover no-repeat;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+
+.hero h1 {
+    font-size: 50px;
+    color: white;
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-size: 20px;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* About Us Section */
+.about-content {
+    padding: 50px;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    animation: slideUp 1s ease-in-out;
+}
+
+/* Operating Hours Section */
+.operating-hours {
+    text-align: center;
+    padding: 50px;
+    background-color: #f8f8f8;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hours-table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+.hours-table th, .hours-table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.hours-table th {
+    background-color: #f39c12;
+    color: white;
+}
+
+.hours-table td {
+    background-color: white;
+}
+
+/* Interactive Hover Effect */
+.hours-table tr:hover {
+    background-color: #ffdddd;
+    transition: 0.3s;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px;
+    text-align: center;
+    background: #333;
+    color: white;
+}
+
+.contact a {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

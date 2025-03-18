@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* navbar */
+nav{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0px;
+}
+
+.text-accent{
+  color: #f39c12;
+  
+}
+
+.text-center{
+  text-align: center;
+}
+
+nav > ul{
+    display: flex;
+    justify-content: space-aroundd;
+    list-style: none;
+    list-style-type: none;
+    gap : 20px
+
+}
+
+/* Global cases */
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.text-center{
+    text-align: center;
+}
+.text-xl{
+    font-size: 1rem;
+}
+.text-2xl{
+    font-size: 2rem;
+}
+.text-3xl{
+    font-size: 3rem;
+}
+.text-4xl{
+    font-size: 4rem;
+}
+
+.font-bold{
+    font-weight: bold;
+}
+
+.btn-primary{
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 6px;
+    padding: 5px 10px;
+    
+}
+.btn-primary:active{
+    background-color: bisque;
+}
+
+.btn-accent{
+  background-color: #f39c12;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  border: #c47d0c 1px solid;
+  border-radius: 10px;
+}
+
+.btn-secondary{
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+    border-radius: 6px;
+    padding: 5px 10px;
+}
+
+/* Foooter */
+
+  footer {
+    background-color: rgb(255, 149, 0);
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    /* border-top: 2px solid black; */
+    margin-top: 40px;
+  }
+
+  .footer-section{
+    text-align: left;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+
+  .footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .footer-section p, .footer-section ul {
+    margin: 0;
+  }
+
+  .footer-section a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  .footer-section a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+
+  .footer-bottom {
+    margin-top: 20px;
+  }
+
+  .social-links a {
+    
+  }
+
+  .social-link:hover {
+    color: white;
+  }
+
+  .footer-section li{
+    list-style-type: none;
+  }
