@@ -1,8 +1,5 @@
 document.getElementById("reservation-form").onsubmit = function(event) {
-
-
-
-    event.preventDefault(); // Prevents the form from refreshing the page
+    event.preventDefault(); 
     const name = event.target.name.value;
     const phone = event.target.phone.value;
     const date = event.target.date.value;
@@ -10,8 +7,7 @@ document.getElementById("reservation-form").onsubmit = function(event) {
     const guests=  event.target.guests.value;
     const bookingInfo =  {name,phone,date,time,guests,guests};
     const bookings = JSON.parse(localStorage.getItem("bookingInfo")) || [];
-    bookings.push(bookingInfo)
-    console.log()
+    bookings.push(bookingInfo);
     localStorage.setItem("bookingInfo", JSON.stringify(bookings));
-    
+    location.href = "./myReservation.html";
 };
