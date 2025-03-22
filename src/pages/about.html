@@ -4,26 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - TastyBite</title>
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="./../globalStyles.css">
+    <link rel="stylesheet" href="./../css/about.css">
+    <link rel="stylesheet" href="./../css/globalStyles.css">
 </head>
 <body>
 
-    <nav>
-        <ul>
-          <li>
-            <h1 class="text-xl">TastyBite</h1>
-          </li>
-        </ul>
-        <ul>
-          <li><a href="/">Home</a></li>
+  <header>
+    <nav class="navbar">
+        <div class="left-text">TastyBite</div>
+        
+        <ul class="nav-links" id="navLinks">
+            <li><a class="active-button" href="./../../index.html">Home</a></li>
             <li><a href="./menu.html">Menu</a></li>
-            <li><a href="./about.html">About Us</a></li>
+            <li ><a href="./reservations.html">Reservations</a></li>
+            <li ><a href="./myReservation.html">Cart & Reservations</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li ><a href="./contact.html">Contact</a></li>
         </ul>
-        <ul>
-          <li><a href="tel:+17785866094">Call Us</a></li>
-        </ul>
-      </nav>
+
+        <button class="call-btn"><a href="tel:+17785866094">Call Us</a></button>
+
+        <div class="menu-icon" id="menuIcon">&#9776;</div>
+    </nav>
+</header>
 
     <!-- Hero Section -->
     <div class="hero">

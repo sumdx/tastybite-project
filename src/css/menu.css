@@ -23,7 +23,7 @@ nav > ul{
 /* Banner */
 
 .banner{
-    background-image: url("./../src/menuPageCover2.jpg");
+    background-image: url("./../images/menuPageCover2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
@@ -89,3 +89,26 @@ main{
 }
 
 
+
+
+@media screen and (max-width: 1024px) {
+   
+}
+
+@media screen and (max-width: 767px) {
+    .menu-item-container{
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+
+@media screen and (max-width: 639px) {
+
+    .menu-item-container{
+
+        grid-template-columns: 1fr;
+    }
+    
+}

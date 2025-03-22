@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./menu.css" />
-    <link rel="stylesheet" href="./../globalStyles.css" />
+    <link rel="stylesheet" href="./../css/menu.css" />
+    <link rel="stylesheet" href="./../css/globalStyles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menu | TastyBite</title>
   </head>
@@ -11,7 +11,7 @@
     <!-- navbar -->
     <header>
       <!-- navbar -->
-      <nav>
+      <!-- <nav>
         <ul>
           <li>
             <h1 class="text-xl">TastyBite</h1>
@@ -25,7 +25,23 @@
         <ul>
           <li><a href="tel:+17785866094">Call Us</a></li>
         </ul>
-      </nav>
+      </nav> -->
+       <nav class="navbar">
+            <div class="left-text">TastyBite</div>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a class="active-button" href="./../../index.html">Home</a></li>
+                <li><a href="./menu.html">Menu</a></li>
+                <li ><a href="./reservations.html">Reservations</a></li>
+                <li ><a href="./myReservation.html">Cart & Reservations</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li ><a href="./contact.html">Contact</a></li>
+            </ul>
+    
+            <button class="call-btn"><a href="tel:+17785866094">Call Us</a></button>
+    
+            <div class="menu-icon" id="menuIcon">&#9776;</div>
+        </nav>
       <!-- banner -->
       <section class="banner">
         <h1 class="text-4xl">Explore Menu</h1>
@@ -92,6 +108,6 @@
       </div>
     </footer>
 
-    <script src="./menu.js"></script>
+    <script src="./../js/menu.js"></script>
   </body>
 </html>

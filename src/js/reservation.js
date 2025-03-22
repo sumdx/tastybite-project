@@ -9,5 +9,5 @@ document.getElementById("reservation-form").onsubmit = function(event) {
     const bookings = JSON.parse(localStorage.getItem("bookingInfo")) || [];
     bookings.push(bookingInfo);
     localStorage.setItem("bookingInfo", JSON.stringify(bookings));
-    location.href = "./myReservation.html";
+    location.href = "./../pages/myReservation.html";
 };

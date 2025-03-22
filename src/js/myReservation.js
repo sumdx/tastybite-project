@@ -3,28 +3,30 @@ document.addEventListener("DOMContentLoaded", () => {
     const bookingInfo = JSON.parse(localStorage.getItem("bookingInfo"));
     console.log(bookingInfo);
 
-    const reservationList = document.getElementById("reservation-list");
+    const reservationList = document.getElementById("reservation-body");
 
     if(bookingInfo.length>0){
 
         reservationList.innerHTML = bookingInfo
         .map((res, index) => `
-            <div class="reservation-card">
-                <p><strong>Reservation ${index + 1}:</strong></p>
-                <p>Name: ${res.name}</p>
-                <p>Phone: ${res.phone}</p>
-                <p>Date: ${res.date}</p>
-                <p>Time: ${res.time}</p>
-                <p>Guests: ${res.guests}</p>
-                <button onclick="deleteReservation(${index})">Cancel</button>
-                <hr>
-            </div>
+
+            <tr>
+                    <td>${index + 1}</td>
+                    <td>${res.name}</td>
+                    <td>${res.phone}</td>
+                    <td>${res.date}</td>
+                    <td>${res.time}</td>
+                    <td>${res.guests}</td>
+                    <td><button onclick="deleteReservation(${index})">Cancel</button></td>
+            </tr>
         `)
         .join("");
 
     }else{
         reservationList.innerHTML =`
-                <h1> No reservation found</h1>
+        <tr >
+                    <td class="py-sm" colspan="7"> No reservation found</td>
+        </tr>
            
         `
     }

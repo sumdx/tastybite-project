@@ -2,7 +2,7 @@
 /* Banner */
 
 .banner{
-    background-image: url("./src/cover.jpg");
+    background-image: url("./../images/cover.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -103,4 +103,39 @@ button{
 
 .best-section h1{
     margin: 20px 0px;
+}
+
+@media screen and (max-width: 1024px) {
+   
+}
+
+@media screen and (max-width: 767px) {
+    .best-item-container{
+        grid-template-columns: 1fr 1fr;
+    }
+    .about-section{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .about-section div{
+        width: 100%;
+    
+    }
+    .about-img{
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .about-section div{
+        width: 100%;
+    
+    }
+    .about-section{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .best-item-container{
+        grid-template-columns: 1fr ;
+    }
 }

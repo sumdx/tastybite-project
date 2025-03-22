@@ -50,3 +50,15 @@
 .reservation-card{
     display: flex;
 }
+
+table{
+    width: 100%;
+    border: 2px solid #e68400;
+    text-align: center;
+    border-collapse: collapse;
+    padding: 20px;
+}
+table td{
+    
+    border-collapse: collapse;
+}
