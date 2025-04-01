@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
       data = menu;
       categories = [...new Set(data.map((item) => item.category))];
 
-      console.log(data);
+
       // menuContainer.innerHTML = "";
       const food = data.find((item) => item.id == id);
       itemTitle.innerHTML = `<h1 id="itemTitle" class="text-4xl">

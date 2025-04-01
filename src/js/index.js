@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   data = menu;
   let index = 6;
   data.sort((a, b) => b.rating - a.rating);
-  console.log(data);
+
   for (let i = 0; i < 6; i++) {
     const bestItemContainer = document.getElementById("best-item-container");
     const bestItemBox = document.createElement("div");
@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
             <br>
             <p>Rating : ${data[i].rating || "Delicious food!"}</p>
         <div>
-        <button  class="menu-item-button btn-accent">Add to cart</button>
-        <button class="menu-item-details btn-accent"><a href="./../pages/menuItem.html?id=${
+        <button  class="menu-item-button btn-accent" onclick="addToCart(${data[i].id})">Add to cart</button>
+        <button class="menu-item-details btn-accent"><a href="./src/pages/menuItem.html?id=${
           data[i].id
         }">Details</a></button>
         </div>
@@ -28,6 +28,19 @@ document.addEventListener("DOMContentLoaded", () => {
     bestItemContainer.appendChild(bestItemBox);
   }
 });
+
+function addToCart(itemId) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  const item = menu.find((i) => i.id=== itemId);
+  if (!cart.includes(item)) {
+      cart.push(item);
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert(`Item ${item.name} added to cart!`);
+}
+
 document.getElementById("last-updated").textContent = new Date(document.lastModified).toLocaleString();
 document.getElementById("current-time").textContent = new Date().toLocaleString();
 menu = [

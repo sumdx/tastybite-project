@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
             data = menu; 
             categories = [...new Set(data.map(item => item.category))];
 
-            console.log("Categories:", categories); 
+            
 
             menuContainer.innerHTML = "";
 
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             <h3>${item.name}</h3>
                             <p>${item.description || "Delicious food!"}</p>
                             <div>
-                            <button class="menu-item-button btn-accent">Add to cart</button>
+                            <button class="menu-item-button btn-accent " onclick="addToCart(${item.id})"  data-id="${item.id}">Add to cart</button>
                             <button class="menu-item-details btn-accent"><a href="./../pages/menuItem.html?id=${item.id}">Details</a></button>
                             </div>
                             
@@ -57,8 +57,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 menuContainer.appendChild(categoryDiv);
             });
+
+            
         
 });
+function addToCart(itemId) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  const item = menu.find((i) => i.id=== itemId);
+  if (!cart.includes(item)) {
+      cart.push(item);
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert(`Item ${item.name} added to cart!`);
+}
+
+
+
 menu = [
     {
       rating: 4.5,
